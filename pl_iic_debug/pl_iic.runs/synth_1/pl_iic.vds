@@ -1,0 +1,454 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jan 26 17:11:23 2022
+# Process ID: 7568
+# Current directory: C:/FPGA/MicroZus/pl_iic_debug/pl_iic.runs/synth_1
+# Command line: vivado.exe -log pl_iic.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_iic.tcl
+# Log file: C:/FPGA/MicroZus/pl_iic_debug/pl_iic.runs/synth_1/pl_iic.vds
+# Journal file: C:/FPGA/MicroZus/pl_iic_debug/pl_iic.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pl_iic.tcl -notrace
+Command: synth_design -top pl_iic -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9512 
+WARNING: [Synth 8-2611] redeclaration of ansi port SCL is not allowed [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:25]
+WARNING: [Synth 8-2611] redeclaration of ansi port SDA is not allowed [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:26]
+WARNING: [Synth 8-2611] redeclaration of ansi port OUT_LED_DATA is not allowed [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:27]
+WARNING: [Synth 8-2611] redeclaration of ansi port PL_KEY1 is not allowed [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:28]
+WARNING: [Synth 8-2611] redeclaration of ansi port PL_KEY2 is not allowed [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:29]
+WARNING: [Synth 8-976] state has already been declared [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:171]
+WARNING: [Synth 8-2654] second declaration of state ignored [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:171]
+INFO: [Synth 8-994] state is declared here [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:31]
+WARNING: [Synth 8-976] write_byte_cnt has already been declared [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:172]
+WARNING: [Synth 8-2654] second declaration of write_byte_cnt ignored [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:172]
+INFO: [Synth 8-994] write_byte_cnt is declared here [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:32]
+WARNING: [Synth 8-976] write_byte_reg has already been declared [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:173]
+WARNING: [Synth 8-2654] second declaration of write_byte_reg ignored [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:173]
+INFO: [Synth 8-994] write_byte_reg is declared here [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:33]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 379.949 ; gain = 112.105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pl_iic' [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:10]
+	Parameter WRITE_CTRL_BYTE bound to: 8'b10100000 
+	Parameter READ_CTRL_BYTE bound to: 8'b10100001 
+	Parameter WRITE_DATA bound to: 8'b00000101 
+	Parameter WRITE_READ_ADDR bound to: 8'b00011110 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter START_W bound to: 5'b00001 
+	Parameter SEND_CTRL_BYTE_W bound to: 5'b00010 
+	Parameter RECEIVE_ACK_1_W bound to: 5'b00011 
+	Parameter SEND_ADDR_BYTE_W bound to: 5'b00100 
+	Parameter RECEIVE_ACK_2_W bound to: 5'b00101 
+	Parameter SEND_DATA_BYTE_W bound to: 5'b00110 
+	Parameter RECEIVE_ACK_3_W bound to: 5'b00111 
+	Parameter STOP_W bound to: 5'b01000 
+	Parameter START_R_1 bound to: 5'b01001 
+	Parameter SEND_CTRL_BYTE_1_R bound to: 5'b01010 
+	Parameter RECEIVE_ACK_1_R bound to: 5'b01011 
+	Parameter SEND_ADDR_BYTE_R bound to: 5'b01100 
+	Parameter RECEIVE_ACK_2_R bound to: 5'b01101 
+	Parameter START_R_2 bound to: 5'b01110 
+	Parameter SEND_CTRL_BYTE_2_R bound to: 5'b01111 
+	Parameter RECEIVE_ACK_3_R bound to: 5'b10000 
+	Parameter RECEIVE_DATA_R bound to: 5'b10001 
+	Parameter STOP_R bound to: 5'b10010 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:26]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:28]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:29]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:31]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:32]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:33]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:184]
+WARNING: [Synth 8-5788] Register SDA_r_reg in module pl_iic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'pl_iic' (1#1) [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/sources_1/imports/new/pl_iic.v:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 411.422 ; gain = 143.578
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 411.422 ; gain = 143.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 411.422 ; gain = 143.578
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/constrs_1/imports/new/pl_iic.xdc]
+Finished Parsing XDC File [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/constrs_1/imports/new/pl_iic.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA/MicroZus/pl_iic_debug/pl_iic.srcs/constrs_1/imports/new/pl_iic.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pl_iic_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pl_iic_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.023 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.023 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 753.023 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pl_iic'
+INFO: [Synth 8-5546] ROM "sampled_key_info" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SCL_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "SDA_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "SDA_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SDA_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SDA_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'pl_iic', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                            00000 |                            00000
+                 START_W |                            00001 |                            00001
+        SEND_CTRL_BYTE_W |                            00010 |                            00010
+         RECEIVE_ACK_1_W |                            00011 |                            00011
+        SEND_ADDR_BYTE_W |                            00100 |                            00100
+         RECEIVE_ACK_2_W |                            00101 |                            00101
+        SEND_DATA_BYTE_W |                            00110 |                            00110
+         RECEIVE_ACK_3_W |                            00111 |                            00111
+                  STOP_W |                            01000 |                            01000
+               START_R_1 |                            01001 |                            01001
+      SEND_CTRL_BYTE_1_R |                            01010 |                            01010
+         RECEIVE_ACK_1_R |                            01011 |                            01011
+        SEND_ADDR_BYTE_R |                            01100 |                            01100
+         RECEIVE_ACK_2_R |                            01101 |                            01101
+               START_R_2 |                            01110 |                            01110
+      SEND_CTRL_BYTE_2_R |                            01111 |                            01111
+         RECEIVE_ACK_3_R |                            10000 |                            10000
+          RECEIVE_DATA_R |                            10001 |                            10001
+                  STOP_R |                            10010 |                            10010
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 10    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	  20 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+	  20 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pl_iic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 10    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	  20 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+	  20 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "SDA_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "SDA_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SCL_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sampled_key_info" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SDA_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SDA_r" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|pl_iic      | write_byte_cnt | 32x1          | LUT            | 
+|pl_iic      | write_byte_reg | 32x1          | LUT            | 
+|pl_iic      | SDA_en         | 32x1          | LUT            | 
+|pl_iic      | write_byte_cnt | 32x1          | LUT            | 
+|pl_iic      | write_byte_reg | 32x1          | LUT            | 
+|pl_iic      | SDA_en         | 32x1          | LUT            | 
++------------+----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 753.023 ; gain = 485.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 766.574 ; gain = 498.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     3|
+|4     |LUT2   |    13|
+|5     |LUT3   |     6|
+|6     |LUT4   |    15|
+|7     |LUT5   |    43|
+|8     |LUT6   |    54|
+|9     |MUXF7  |     1|
+|10    |FDCE   |    49|
+|11    |FDPE   |     7|
+|12    |FDRE   |     1|
+|13    |IBUF   |     4|
+|14    |IOBUF  |     1|
+|15    |OBUF   |     5|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   208|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 770.277 ; gain = 160.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 770.277 ; gain = 502.434
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 770.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 770.277 ; gain = 515.406
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.277 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA/MicroZus/pl_iic_debug/pl_iic.runs/synth_1/pl_iic.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pl_iic_utilization_synth.rpt -pb pl_iic_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 26 17:12:03 2022...
