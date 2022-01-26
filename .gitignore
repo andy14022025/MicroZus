@@ -2,3 +2,7 @@
 pl_led_stream/pl_led_stream.sim/
 
 pl_led_stream/pl_led_stream.runs/
+
+pl_key_detect/
+
+pl_vga_to_hdmi_out/pl_hdmi_out/pl_hdmi_out.runs/
